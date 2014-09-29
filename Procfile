@@ -1,1 +1,1 @@
-web: statuswall
+web: useme-statuswall
