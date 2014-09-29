@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/tooltwist/useme-statuswall",
+	"GoVersion": "go1.3.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/franela/goreq",
+			"Rev": "cd8946694e6eeb2420c2ac86632f701faaa39007"
+		}
+	]
+}
