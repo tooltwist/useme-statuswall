@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	ENABLE_PAGER_DUTY = false
+	ENABLE_PAGER_DUTY = true
 
 	// Raise an alarm if the temperature exceeds this
 	ALARM_TRIGGER_TEMPERATURE = 27
