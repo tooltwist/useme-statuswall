@@ -18,11 +18,11 @@ const (
 	ENABLE_PAGER_DUTY = true
 
 	// Raise an alarm if the temperature exceeds this
-	ALARM_TRIGGER_TEMPERATURE = 27
-	ALARM_RESOLVE_TEMPERATURE = 26
+	ALARM_TRIGGER_TEMPERATURE = 30
+	ALARM_RESOLVE_TEMPERATURE = 27
 
 	// Raise an alarm if we don't get an update for this long
-	ALARM_NON_REPORTING_TIME = 120
+	ALARM_NON_REPORTING_TIME = 600
 
 	// Graph URL
 	REPORT_URL = "http://localhost:3000/temperature/view"
@@ -234,7 +234,7 @@ func pagerDuty_event(alarmType int) {
 	case ALARM_TEMPERATURE_EXCEEDED:	
 		body = `
 		{
-			"service_key": "0a2d981759b34dfe93710b6397d3c2be",
+			"service_key": "735da79b2b9a427782f1aa0b6c16a9dd",
 			"incident_key": "serverRoom/temperature",
 			"event_type": "trigger",
 			"description": "Room is hot",
@@ -246,7 +246,7 @@ func pagerDuty_event(alarmType int) {
 	case ALARM_NOT_REPORTING:	
 		body = `
 		{
-			"service_key": "0a2d981759b34dfe93710b6397d3c2be",
+			"service_key": "735da79b2b9a427782f1aa0b6c16a9dd",
 			"incident_key": "serverRoom/temperature",
 			"event_type": "trigger",
 			"description": "Monitor has stopped reporting",
@@ -258,7 +258,7 @@ func pagerDuty_event(alarmType int) {
 	case ALARM_NONE:	
 		body = `
 		{
-			"service_key": "0a2d981759b34dfe93710b6397d3c2be",
+			"service_key": "735da79b2b9a427782f1aa0b6c16a9dd",
 			"incident_key": "serverRoom/temperature",
 			"event_type": "resolve",
 			"description": "Reporting acceptable temperature",
